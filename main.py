@@ -61,18 +61,21 @@ def main():
                               help="input batch size for training (default: 128)")
     train_parser.add_argument("--test-batch-size", type=int, default=128, metavar="BT",
                               help="input batch size for testing (default: 128)")
-    train_parser.add_argument("--lr_decay", type=float, default=0.1, metavar="LD", help="learning rate decay rate")
+    train_parser.add_argument("--lr_decay", type=float, default=0.1, metavar="LD",
+                              help="learning rate decay rate (default: 0.1)")
     train_parser.add_argument("--schedule", type=int, nargs="*", default=[80, 120],
-                              help="learning rate is decayed at these epochs")
-    train_parser.add_argument("--warmup-epochs", type=int, default=5, metavar="WE", help="number of warmup epochs")
-    train_parser.add_argument("--no-cuda", action="store_true", default=False, help="disables CUDA training")
+                              help="learning rate is decayed at these epochs (default: [80, 120])")
+    train_parser.add_argument("--warmup-epochs", type=int, default=5, metavar="WE",
+                              help="number of warmup epochs (default: 5)")
+    train_parser.add_argument("--no-cuda", action="store_true", default=False,
+                              help="disables CUDA training (default: False)")
     train_parser.add_argument("--seed", type=int, default=None, metavar="S",
                               help="random seed (default: None)")
 
     simulator_parser = parser.add_argument_group("Simulator Parameters")
-    simulator_parser.add_argument("--sim-size", type=int, default=8, metavar="N", help="size of simulator")
+    simulator_parser.add_argument("--sim-size", type=int, default=8, metavar="N", help="size of simulator (default: 8)")
     simulator_parser.add_argument("--sim-gamma-shape", type=float, default=100, metavar="GSH",
-                                  help="gamma shape parameter")
+                                  help="gamma shape parameter (default: 100)")
     simulator_parser.add_argument("--sim-gamma-scale", type=float, default=None, metavar="GSC",
                                   help="gamma scale parameter (default: B / GSH)")
 
@@ -83,7 +86,7 @@ def main():
     optimizer_parser.add_argument("--weight-decay", type=float, default=1e-4, metavar="WD",
                                   help="SGD weight decay (default: 1e-4)")
     optimizer_parser.add_argument("--naive", default=False, action="store_true",
-                                  help="disables advanced estimation")
+                                  help="disables SMEGA2 advanced estimation")
 
     args = parser.parse_args()
 
