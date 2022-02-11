@@ -19,8 +19,11 @@ optional arguments:
   -h, --help            show this help message and exit
 
 Train Parameters:
-  --dataset DS          train dataset (default: cifar10)
-  --model MDL           model to train (default: resnet20)
+  --dataset DS          train dataset: cifar10, cifar100, imagenet, fake-
+                        imagenet (default: cifar10)
+  --model MDL           model to train: resnet56, resnet34, resnet44,
+                        resnet110, resnet152, resnet18, resnet101, resnet32,
+                        resnet50, resnet1202, resnet20 (default: resnet20)
   --epochs E            number of epochs to train (default: 10)
   --batch-size B        input batch size for training (default: 128)
   --test-batch-size BT  input batch size for testing (default: 128)
