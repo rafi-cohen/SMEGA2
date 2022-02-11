@@ -50,10 +50,10 @@ def main():
 
     train_parser = parser.add_argument_group("Train Parameters")
     train_parser.add_argument("--dataset", default="cifar10", metavar="DS",
-                              help="train dataset (default: cifar10)",
+                              help="train dataset: %(choices)s (default: cifar10)",
                               choices=DATASETS.keys())
     train_parser.add_argument("--model", default="resnet20", metavar="MDL",
-                              help="model to train (default: resnet20)",
+                              help="model to train: %(choices)s (default: resnet20)",
                               choices=CIFAR_MODELS.keys() | IMAGENET_MODELS.keys())
     train_parser.add_argument("--epochs", type=int, default=160, metavar="E",
                               help="number of epochs to train (default: 10)")
