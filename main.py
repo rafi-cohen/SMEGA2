@@ -141,7 +141,7 @@ def main():
         args.cuda,
     )
 
-    wandb.init(config=args, settings=wandb.Settings(start_method="fork"))
+    wandb.init(config=args, settings=wandb.Settings(start_method="fork"), anonymous="allow")
     trainer.run()
     wandb.finish()
 
