@@ -32,7 +32,7 @@ Train Parameters:
   --seed S              random seed (default: None)
 
 Simulator Parameters:
-  --sim-size N          size of simulator (default: 8)
+  --sim-size N          number of workers to simulate (default: 8)
   --sim-gamma-shape GSH
                         gamma shape parameter (default: 100)
   --sim-gamma-scale GSC
