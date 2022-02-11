@@ -1,6 +1,13 @@
 # SMEGA2
 SMEGA2: Distributed Deep Learning Using a Single Momentum Buffer
 
+# Installation
+```
+git clone --recurse-submodules https://github.com/rafi-cohen/SMEGA2.git
+cd SMEGA2
+pip install -r requirements.txt
+```
+
 # Usage
 ```text
 usage: main.py [-h] [--dataset DS] [--model MDL] [--epochs E] [--batch-size B] [--test-batch-size BT] [--lr_decay LD] [--schedule [SCHEDULE [SCHEDULE ...]]] [--warmup-epochs WE]
@@ -35,4 +42,10 @@ Optimizer Parameters:
   --lr LR               learning rate (default: 0.1)
   --momentum M          SGD momentum (default: 0.9)
   --weight-decay WD     SGD weight decay (default: 1e-4)
-  --naive               disables SMEGA2 advanced estimation```
+  --naive               disables SMEGA2 advanced estimation
+```
+
+# Viewing Results
+The results are tracked using [Weights & Biases](https://wandb.ai/). You can run the code, see a W&B dashboard, and visualize results without needing to create a Weights & Biases account first.
+
+A link to the dashboard will be printed to the terminal before training starts.
