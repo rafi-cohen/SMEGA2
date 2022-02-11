@@ -73,7 +73,8 @@ def main():
                               help="random seed (default: None)")
 
     simulator_parser = parser.add_argument_group("Simulator Parameters")
-    simulator_parser.add_argument("--sim-size", type=int, default=8, metavar="N", help="size of simulator (default: 8)")
+    simulator_parser.add_argument("--sim-size", type=int, default=8, metavar="N",
+                                  help="number of workers to simulate (default: 8)")
     simulator_parser.add_argument("--sim-gamma-shape", type=float, default=100, metavar="GSH",
                                   help="gamma shape parameter (default: 100)")
     simulator_parser.add_argument("--sim-gamma-scale", type=float, default=None, metavar="GSC",
